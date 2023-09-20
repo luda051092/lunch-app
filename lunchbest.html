@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Best <Customers>% endblock %</Customers>
+{% block content %}
+
+<a class="btn btn-primary" style="float: right" href="/add/">Add customer</a></p>
+
+<h1>Best Customers</h1>
+
+<ul style="column-count: 4">
+    {% for customer in customers %}
+    <li><a href="/{{ customer.id }}/">{{ customer.firstName }}{{ customer.lastName }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
